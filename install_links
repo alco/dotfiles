@@ -1,0 +1,5 @@
+#!/bin/bash
+ln -s gitattributes ~/.gitattributes
+ln -s gitexcludes ~/.gitexcludes
+ln -s gitconfig ~/.gitconfig
+ln -s bash_profile ~/.bash_profile
