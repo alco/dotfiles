@@ -17,8 +17,8 @@
         brief = show --stat
 [core]
         autocrlf = false
-        excludesfile = "~/.gitexcludes"
-        attributesfile = "~/.gitattributes"
+        excludesfile = ~/.gitexcludes
+        attributesfile = ~/.gitattributes
 [imap]
 	folder = "Drafts"
 	host = imaps://imap.gmail.com
