@@ -29,6 +29,7 @@ unsetopt correct_all
 # Customize to your needs...
 export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 export PYTHONPATH=/usr/local/lib/python
+export NODE_PATH=/usr/local/lib/node_modules
 
 alias ls='ls -G'
 alias lsg='ls -Gg'
@@ -43,6 +44,10 @@ alias gci='git commit'
 alias grb='git rebase'
 alias gad='git add'
 alias gst='git status'
+
+if [ -e /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin ]; then
+    export PATH=/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:$PATH
+fi
 
 if [ -e ~/home/bin ]; then
     export PATH=~/home/bin:$PATH
