@@ -47,7 +47,7 @@ set hidden                      " don't ask to save a buffer before hiding it
 " new in vim 7.3
 "set relativenumber
 "set undofile
-filetype plugin indent on
+" filetype plugin indent on
 
 "set list
 set listchars=tab:▸\ ,eol:¬
@@ -63,7 +63,7 @@ set expandtab
 
 set nowrap
 
-set hlsearch
+" set hlsearch
 " Turn off highlighted search words when <C-N> is pressed
 nmap <silent> <C-N> :silent noh<CR>
 set incsearch
