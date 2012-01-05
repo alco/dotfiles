@@ -70,6 +70,30 @@ set incsearch
 set ignorecase
 set smartcase
 
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+  " Enable file type detection
+  filetype on
+
+  " Treat .md files as Markdown
+  autocmd BufNewFile,BufRead *.md set filetype=markdown
+
+  " Remove trailing whitespace when saving a file
+  autocmd BufWritePre *.md,*.py,*.js,.vimrc :call <SID>StripTrailingWhitespaces()
+endif
+
 " Toggle the highlight color of the current line
 " with a § key
 set cursorline
