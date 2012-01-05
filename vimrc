@@ -7,6 +7,7 @@ match OverLength /\%81v.\+/
 
 " Set default font for the MacVim
 set guifont=Menlo:h16
+set guioptions-=T               " Hide the toolbar in MacVim
 
 " Disable arrow keys
 nnoremap <up> <nop>
