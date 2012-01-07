@@ -30,8 +30,6 @@ map <D-7> 7gt
 map <D-8> 8gt
 map <D-9> 9gt
 map <D-0> :tablast<CR>
-" Map ; to : to simplify command input
-nnoremap ; :
 
 " Basic functionality
 syntax enable
@@ -49,6 +47,8 @@ set hidden                      " don't ask to save a buffer before hiding it
 "set undofile
 " filetype plugin indent on
 
+nmap <Leader>ew :e <C-R>=expand("%:h") . "/" <CR>
+nmap <Leader>et :tabe <C-R>=expand("%:h") . "/" <CR>
 "set list
 set listchars=tab:▸\ ,eol:¬
 
