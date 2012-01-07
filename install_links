@@ -1,7 +1,10 @@
 #!/bin/bash
-ln -s gitattributes ~/.gitattributes
-ln -s gitexcludes ~/.gitexcludes
-ln -s gitconfig ~/.gitconfig
-ln -s bash_profile ~/.bash_profile
-ln -s zshrc ~/.zshrc
-ln -s vimrc ~/.vimrc
+
+cd "`dirname $0`"
+path="`pwd`"
+ln -s "$path/gitattributes" ~/.gitattributes
+ln -s "$path/gitexcludes" ~/.gitexcludes
+ln -s "$path/gitconfig" ~/.gitconfig
+ln -s "$path/bash_profile" ~/.bash_profile
+ln -s "$path/zshrc" ~/.zshrc
+ln -s "$path/vimrc" ~/.vimrc
